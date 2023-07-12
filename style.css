@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#clock {
+    /* display: inline; */
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px 45px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    background: rgb(238, 174, 202);
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(138, 94, 210, 1) 49%, rgba(148, 187, 233, 1) 100%);
+}
+
+
+h2 {
+    color: #aaa;
+}
+
+#task-form {
+    margin-bottom: 20px;
+}
+
+input[type="datetime-local"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="datetime-local"] {
+    width: 40%;
+}
+
+#add-button {
+    display: block;
+    width: calc(40% + 22px);
+    padding: 10px;
+    background-color: #4caf50;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#add-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#task-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    position: relative;
+    margin-bottom: 36px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* CSS for delete button */
+
+#list tr:hover .delete-button {
+    display: inline-block;
+}
+
+#list td:hover {
+    position: relative;
+}
+
+#list th:first-child,
+#list td:first-child {
+    width: 20%;
+}
+
+#list th:last-child,
+#list td:last-child {
+    width: 80%;
+}
+
+.delete-button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff4c4c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
+
+/* CSS for delete all button */
+#delete-all-button {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 150px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -46px;
+    font-size: 17px;
+}
+
+#delete-all-button:hover {
+    background-color: #c82333;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 10px;
+    }
+
+    #list th:first-child,
+    #list td:first-child {
+        display: none;
+    }
+
+    #list th:last-child,
+    #list td:last-child {
+        width: 100%;
+    }
+}
